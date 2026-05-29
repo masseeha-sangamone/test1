@@ -6,9 +6,9 @@ This project is a simple single-page arithmetic assessment application designed 
 
 The application evaluates basic numeracy skills using three arithmetic questions:
 
-* Addition
-* Subtraction
-* Multiplication
+1.Addition
+2. Subtraction
+3. Multiplication
 
 Students must answer all three questions correctly to pass the assessment.
 
@@ -21,7 +21,6 @@ Features
 * Pass/Fail result display
 * Child-friendly single-page interface
 
-
 Technologies Used
 
 * HTML
@@ -30,9 +29,9 @@ Technologies Used
 
 Project Files
 
-* `index.html` – Main structure of the application
-* `style.css` – Styling and layout
-* `app.js` / `test_logic.js` – Question generation and evaluation logic
+* 'index.html' – Main structure of the application
+* 'style.css' – Styling and layout
+* 'app.js' / 'test_logic.js' – Question generation and evaluation logic
 
 Evaluation Logic
 
