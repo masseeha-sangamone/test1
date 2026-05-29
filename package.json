@@ -1,0 +1,17 @@
+{
+  "name": "dubai-school-admission-quiz",
+  "version": "1.0.0",
+  "description": "Dubai School Admission Quiz Application featuring a premium glassmorphic dark theme.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000",
+    "test": "node test_logic.js"
+  },
+  "keywords": [
+    "school-admission",
+    "quiz",
+    "math"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}

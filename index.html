@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dubai School Admission Evaluation Platform</title>
+    <meta name="description" content="Official admission portal and digital evaluation desk for new candidate school entry in Dubai. Powered by Antigravity state management.">
+    
+    <!-- Premium stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient glow decorative layers for premium dark theme -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <!-- Canvas for high-fidelity particles/confetti on pass state -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <main class="screen-wrapper">
+        
+        <!-- ================= QUIZ SCREEN ================= -->
+        <section id="quiz-screen" class="app-card vstack animate-scale-up">
+            <header class="vstack">
+                <h1>Dubai School Admission</h1>
+                <p class="subtitle">Digital Evaluation Portal</p>
+            </header>
+
+            <!-- VStack containing three HStack rows -->
+            <form id="quiz-form" class="vstack questions-container" onsubmit="event.preventDefault(); submit_quiz();">
+                
+                <!-- [Q1] Row: Addition -->
+                <div class="hstack question-row" id="q1-container">
+                    <span class="q-badge">Q1</span>
+                    <div class="math-expression">
+                        <span id="q1-num1">0</span>
+                        <span class="operator">+</span>
+                        <span id="q1-num2">0</span>
+                        <span class="operator">=</span>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="ans1-input" 
+                        class="math-input" 
+                        inputmode="numeric" 
+                        pattern="[0-9]*" 
+                        placeholder="?" 
+                        maxlength="3"
+                        required
+                        aria-label="Question 1 Answer"
+                    >
+                </div>
+
+                <!-- [Q2] Row: Subtraction with A >= B -->
+                <div class="hstack question-row" id="q2-container">
+                    <span class="q-badge">Q2</span>
+                    <div class="math-expression">
+                        <span id="q2-num1">0</span>
+                        <span class="operator">-</span>
+                        <span id="q2-num2">0</span>
+                        <span class="operator">=</span>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="ans2-input" 
+                        class="math-input" 
+                        inputmode="numeric" 
+                        pattern="[0-9]*" 
+                        placeholder="?" 
+                        maxlength="3"
+                        required
+                        aria-label="Question 2 Answer"
+                    >
+                </div>
+
+                <!-- [Q3] Row: Multiplication -->
+                <div class="hstack question-row" id="q3-container">
+                    <span class="q-badge">Q3</span>
+                    <div class="math-expression">
+                        <span id="q3-num1">0</span>
+                        <span class="operator">×</span>
+                        <span id="q3-num2">0</span>
+                        <span class="operator">=</span>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="ans3-input" 
+                        class="math-input" 
+                        inputmode="numeric" 
+                        pattern="[0-9]*" 
+                        placeholder="?" 
+                        maxlength="3"
+                        required
+                        aria-label="Question 3 Answer"
+                    >
+                </div>
+
+                <!-- Submit Button container at the bottom container of the VStack -->
+                <button type="submit" id="submit-button" class="submit-btn">SUBMIT</button>
+            </form>
+        </section>
+
+        <!-- ================= OUTCOME SCREEN ================= -->
+        <section id="outcome-screen" class="screen-wrapper hidden">
+            <!-- Content will be dynamically inserted here via update_ui() based on evaluate_results() -->
+            <div id="outcome-container" class="vstack"></div>
+        </section>
+
+    </main>
+
+    <!-- Core interactive scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
